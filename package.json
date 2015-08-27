@@ -5,7 +5,7 @@
   "main": "src/angular_filepicker-module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cat src/*.js | ng-annotate --add -  | uglifyjs  -o dist/angular_filepicker.min.js",
+    "build": "cat src/*.js src/**/*.js | ng-annotate --add -  | uglifyjs  -o dist/angular_filepicker.min.js",
     "serve": "http-server -o"
   },
   "repository": {

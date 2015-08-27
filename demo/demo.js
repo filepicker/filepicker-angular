@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
-.config(function ($routeProvider, angularFilepickerProvider) {
-    angularFilepickerProvider.setKey('AwMr7Yc2nQX2zdOcs5Q1Az');
+.config(function ($routeProvider, filepickerProvider) {
+    filepickerProvider.setKey('AwMr7Yc2nQX2zdOcs5Q1Az');
 
     $routeProvider
     .when('/', {
@@ -42,5 +42,5 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
     };
 })
 .controller('ExamplesCtrl', function ($scope, filepickerService, $window) {
-    
+
 });

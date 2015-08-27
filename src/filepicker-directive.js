@@ -13,7 +13,6 @@ function filepickerDirective($rootScope, filepickerService){
             /*
                 pass orinal event
             */
-            
             element.bind('change', function(event) {
                 event.preventDefault();
                 scope.onSuccess({event: event.originalEvent});
@@ -23,3 +22,5 @@ function filepickerDirective($rootScope, filepickerService){
         }
     };
 };
+
+
