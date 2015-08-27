@@ -1,0 +1,34 @@
+{
+  "name": "angular-filepicker",
+  "version": "1.0.0",
+  "description": "AngularJS bindings for Filepicker js library",
+  "main": "src/angular_filepicker-module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cat src/*.js | ng-annotate --add -  | uglifyjs  -o dist/angular_filepicker.min.js",
+    "serve": "http-server -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krystiangw/angular-filepicker.git"
+  },
+  "keywords": [
+    "angular",
+    "filepicker",
+    "dialog",
+    "widget"
+  ],
+  "author": "krystiangw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krystiangw/angular-filepicker/issues"
+  },
+  "homepage": "https://github.com/krystiangw/angular-filepicker",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "http-server": "^0.8.0",
+    "ng-annotate": "^1.0.2",
+    "uglify-js": "^2.4.24"
+  }
+}
