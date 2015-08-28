@@ -31,11 +31,33 @@
 		<pre>{{pickMultipleResults || 'Run example to see results' | json:2}}</pre>
 	</div>
 </div>
-<h3>fp convert filter exampe</h3>
+<h3>Convert filter</h3>
+<h4>Width = 200px</h4>
 <div class="row">
 	<div class="col-md-6">
-		<img ng-src="{{'https://www.filepicker.io/api/file/02bvV8eS6msTqRgWPeAv' | fpConvert: {w:200} }}">
+		<img ng-src="{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {w:200} }}">
 	</div>
 	<div class="col-md-6">
+		<pre>&lt;img src="{{fpConvertExamples[0]}}&gt;</pre>
+	</div>
+</div>
+
+<h4>Crop = 100,100,300,300</h4>
+<div class="row">
+	<div class="col-md-6">
+		<img ng-src="{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {crop:'100,100,300,300'} }}">
+	</div>
+	<div class="col-md-6">
+		<pre>&lt;img src="{{fpConvertExamples[1]}}&gt;</pre>
+	</div>
+</div>
+
+<h4>Filter = sharpen + width = 300</h4>
+<div class="row">
+	<div class="col-md-6">
+		<img ng-src="{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {filter:'sharpen',w: 250} }}">
+	</div>
+	<div class="col-md-6">
+		<pre>&lt;img src="{{fpConvertExamples[2]}}&gt;</pre>
 	</div>
 </div>

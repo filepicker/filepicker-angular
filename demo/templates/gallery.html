@@ -1,10 +1,10 @@
 <p>
-	<input filepicker type="filepicker" data-fp-service="computer" name="myName" on-success="onSuccess(event.fpfile)" >
+	<button class="btn" ng-click="pickFile()">Click to add images</button>
 </p>
 <div class="row">
   <div class="col-sm-3" ng-repeat="file in files | orderBy:'creationTime'">
     <div class="thumbnail">
-      <img ng-src="{{file.url}}" alt="{{file.filename}}" style="height: 150px;">
+      <img ng-src="{{file.url | fpConvert:{w: 100} }}" alt="{{file.filename}}" style="height: 150px;">
       <div class="caption">
         <h3>{{file.filename}}</h3>
       </div>

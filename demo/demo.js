@@ -42,5 +42,9 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
     };
 })
 .controller('ExamplesCtrl', function ($scope, filepickerService, $window) {
-
+    $scope.fpConvertExamples = [
+    "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {w:200} }}",
+    "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {crop:100,100,300,300} }}",
+    "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {filter:'sharpen',w: 250} }}",
+    ]
 });
