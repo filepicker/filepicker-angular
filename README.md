@@ -55,11 +55,47 @@ angular.module('angularFilepickerExample')
 ### ```filepicker``` directive
 It allows you to use filepicker widgets in angular templates. It support all attributes from the [docs](https://www.filepicker.com/documentation/file_ingestion/widgets/pick?v=v2), the only diffrence is use of ```on-success``` instead of ```onchage```. Directive restricts attribute mode. 
 Avaliable widtet types: ```filepicker```, ```filepicker-dragdrop```, ```filepicker-convert```.
+
 Example: 
 
 ``` 
-&lt;input filepicker type="filepicker-dragdrop" data-fp-services="computer,facebook,dropbox,box" on-success="onSuccess(event.fpfile)" /&gt;
+<input filepicker type="filepicker-dragdrop" data-fp-services="computer,facebook,dropbox,box" on-success="onSuccess(event.fpfile)" />;
 ```
 
+### ```fpConvert``` filter
+Give nice an easy way to benefit from filepicker images conversion. Usefull if you need thumbnail or crop image. 
+Example (image resized to width=200)
+
+``` 
+<img ng-src="{{filepickerLink | fpConvert: {w:200} }}">
+``` 
+Other conversion options:
+* Resizing,
+* fitting and aligning Cropping
+* Watermarking Formatting, 
+* compression and quality 
+* Rotating
+* Adding filters 
+
+Detailed [docs](https://www.filepicker.com/documentation/file_processing/image_conversion/image)
+
+## Demo
+Demo avaliable in the /demo directory.
+To run demo on localhost:
+``` 
+npm install
+npm serve
+``` 
+
+Local server will be launched http://localhost:8080/demo/
+
+## Contributing
+Contributing welcomed. To build dist run:
+``` 
+npm install
+npm build
+``` 
+## License
+MIT
 
 
