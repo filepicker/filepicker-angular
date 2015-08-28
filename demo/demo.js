@@ -23,7 +23,6 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
 })
 .controller('GalleryCtrl', function ($scope, filepickerService, $window) {
     $scope.files = JSON.parse($window.localStorage.getItem('files') || '[]');
-    filepickerService.setKey('Av6PexkFtTuK4YXaE3T93z');
 
     $scope.pickFile = pickFile;
 
