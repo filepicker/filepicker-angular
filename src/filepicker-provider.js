@@ -8,6 +8,10 @@ angular.module('angular-filepicker')
      };
 
     this.setKey = function(key) {
-        this.key = key;
+        try {
+            window.filepicker.setKey(key);
+        } catch(err) {
+            console.error('Include filepicker.js script');
+        }
     };
 });
