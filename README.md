@@ -62,6 +62,15 @@ Example:
 <input filepicker type="filepicker-dragdrop" data-fp-services="computer,facebook,dropbox,box" on-success="onSuccess(event.fpfile)" />;
 ```
 
+### ```filepicker-preview``` directive
+It is equivalent of embedded filepicker viewer widget [docs](https://www.filepicker.com/documentation/viewer?v=v2). Directive restricts attribute mode. 
+The only attribute is ```url``` . Must be [filepicker type](https://www.filepicker.com/documentation/filepicker-architecture?v=v2) link.
+Example:
+
+``` 
+<div filepicker-preview url="previewUrlExample" style="width:90%; height:500px"></div>
+```
+
 ### ```fpConvert``` filter
 Give nice an easy way to benefit from filepicker images conversion. Usefull if you need thumbnail or crop image. 
 Example (image resized to width=200)
