@@ -42,8 +42,16 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
 })
 .controller('ExamplesCtrl', function ($scope, filepickerService, $window) {
     $scope.fpConvertExamples = [
-    "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {w:200} }}",
-    "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {crop:100,100,300,300} }}",
-    "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {filter:'sharpen',w: 250} }}",
-    ]
+        "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {w:200} }}",
+        "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {crop:100,100,300,300} }}",
+        "{{'https://www.filepicker.io/api/file/qHi4LxRh28IeEBdJcFpw' | fpConvert: {filter:'sharpen',w: 250} }}",
+    ];
+
+    $scope.previewUrls = [
+        'https://www.filepicker.io/api/file/L78eRqmFQYuZoozoddbX',
+        'https://www.filepicker.io/api/file/k4MtpaPCRBGhzirfsxK6',
+        'https://www.filepicker.io/api/file/nHZO4WqdQfWkHallRrff'
+    ];
+
+    $scope.previewUrlExample = $scope.previewUrls[0];
 });

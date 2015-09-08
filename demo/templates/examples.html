@@ -61,3 +61,20 @@
 		<pre>&lt;img src="{{fpConvertExamples[2]}}&gt;</pre>
 	</div>
 </div>
+
+
+<h3>filepicker-widget directive with multiple files option</h3>
+<div class="row">
+	<div class="col-md-6">
+		<div filepicker-preview url="previewUrlExample" style="width:90%; height:500px"> </div>
+	</div>
+	<div class="col-md-6">
+		<h4>Select file to preview</h4>
+    <select name="repeatSelect" ng-model="previewUrlExample">
+      <option ng-repeat="option in previewUrls" value="{{option}}" ng-selected="$first">{{option}}</option>
+    </select>
+    <p>
+			<pre>&lt;div filepicker-preview url="previewUrlExample" style="width:90%; height:500px"&gt; &lt;/div&gt;</pre>
+		</p>
+	</div>
+</div>
