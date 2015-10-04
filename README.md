@@ -3,8 +3,10 @@ Filepicker library for AngularJS. It is simple wrapper of filepicker [JS library
 
 
 ## Usage
-* Include filepicker.js script [v2](https://api.filepicker.io/v2/filepicker.js) or [v1](https://api.filepicker.io/v1/filepicker.js)
-* Include angular-filepicker script with bower: ```bower install angular-filepicker``` OR simply copy script from dist directory.
+* Include filepicker.js script [v2](https://api.filepicker.io/v2/filepicker.js) or [v1](https://api.filepicker.io/v1/filepicker.js) and include angular-filepicker script - you can copy it from dist directory
+OR 
+* Install via bower: ```bower install angular-filepicker``` and include bower_com
+
 * Add ```'angular-filepicker'``` module as dependency for your angular app. Example:
 ```
 angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
