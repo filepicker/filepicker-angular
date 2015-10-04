@@ -1,9 +1,9 @@
 {
   "name": "angular-filepicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/krystiangw/angular-filepicker",
   "description": "Filepicker library for AngularJS.",
-  "main": "dist/angular_filepicker.min.js",
+  "main": "dist/angular_filepicker.js",
   "keywords": [
     "filepicker",
     "angular",
@@ -18,9 +18,11 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "demo"
   ],
   "dependencies": {
-    "angular": "~1.2"
+    "angular": ">=1.2.0",
+    "filepicker-js": ">=2.0.0"
   }
 }

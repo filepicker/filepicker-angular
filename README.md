@@ -3,8 +3,10 @@ Filepicker library for AngularJS. It is simple wrapper of filepicker [JS library
 
 
 ## Usage
-* Include filepicker.js script [v2](https://api.filepicker.io/v2/filepicker.js) or [v1](https://api.filepicker.io/v1/filepicker.js)
-* Include angular-filepicker script with bower: ```bower install angular-filepicker``` OR simply copy script from dist directory.
+* Include filepicker.js script [v2](https://api.filepicker.io/v2/filepicker.js) or [v1](https://api.filepicker.io/v1/filepicker.js) and include angular-filepicker script - you can copy it from dist directory
+OR 
+* Install via bower: ```bower install angular-filepicker``` and include bower_com
+
 * Add ```'angular-filepicker'``` module as dependency for your angular app. Example:
 ```
 angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
@@ -60,6 +62,15 @@ Example:
 
 ``` 
 <input filepicker type="filepicker-dragdrop" data-fp-services="computer,facebook,dropbox,box" on-success="onSuccess(event.fpfile)" />;
+```
+
+### ```filepicker-preview``` directive
+It is equivalent of embedded filepicker viewer widget [docs](https://www.filepicker.com/documentation/viewer?v=v2). Directive restricts attribute mode. 
+The only attribute is ```url``` . Must be [filepicker type](https://www.filepicker.com/documentation/filepicker-architecture?v=v2) link.
+Example:
+
+``` 
+<div filepicker-preview url="previewUrlExample" style="width:90%; height:500px"></div>
 ```
 
 ### ```fpConvert``` filter
