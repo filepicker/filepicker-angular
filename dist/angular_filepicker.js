@@ -1,5 +1,8 @@
 'use strict';
-angular.module('angular-filepicker',[]);'use strict';
+angular.module('angular-filepicker',[]);
+
+window.filepicker = window.filepicker || {};
+window.filepicker.plugin = 'angular_js_lib';'use strict';
 
 angular.module('angular-filepicker')
 .directive('filepicker', filepickerDirective);
@@ -19,7 +22,6 @@ function filepickerDirective($rootScope, filepickerService){
                 scope.onSuccess({event: event.originalEvent});
                 $rootScope.$apply();
             });
-
         	filepickerService.constructWidget(element);
         }
     };
@@ -72,12 +74,12 @@ function filepickerPreviewDirective($rootScope, filepickerService){
             iframe.width = '100%';
             iframe.height = '100%';
             angular.element(element).append(iframe);
-            
+
             scope.$watch('url', setUrl);
 
             function setUrl(url){
                 if (!url) {    
-                    return;
+                    return; 
                 } else {
                     url = url.replace('api/file/', 'api/preview/');
                 }

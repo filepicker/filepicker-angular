@@ -4,8 +4,14 @@ Filepicker library for AngularJS. It is simple wrapper of filepicker [JS library
 
 ## Usage
 * Include filepicker.js script [v2](https://api.filepicker.io/v2/filepicker.js) or [v1](https://api.filepicker.io/v1/filepicker.js) and include angular-filepicker script - you can copy it from dist directory
-OR 
-* Install via bower: ```bower install angular-filepicker``` and include bower_com
+
+OR
+
+* Install via bower: ```bower install angular-filepicker``` and include scripts
+```
+<script type="text/javascript" src="bower_components/filepicker-js/dist/filepicker.js"></script>
+<script type="text/javascript" src="bower_components/angular-filepicker/dist/angular-filepicker.js"></script>
+```
 
 * Add ```'angular-filepicker'``` module as dependency for your angular app. Example:
 ```
@@ -95,7 +101,7 @@ Demo avaliable in the /demo directory.
 To run demo on localhost:
 ``` 
 npm install
-npm serve
+npm run serve
 ``` 
 
 Local server will be launched http://localhost:8080/demo/
