@@ -38,6 +38,7 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
     function onSuccess(Blob){
         $scope.files.push(Blob);
         $window.localStorage.setItem('files', JSON.stringify($scope.files));
+        $scope.$apply();
     };
 })
 .controller('ExamplesCtrl', function ($scope, filepickerService, $window) {
