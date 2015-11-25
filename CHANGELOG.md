@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.1 (25.11.2015)
+- Bump up [filepicker-js](https://github.com/filepicker/filepicker-js) library version to 2.3.1
+
 ### 1.1.0 (04.11.2015)
 - Bump up [filepicker-js](https://github.com/filepicker/filepicker-js) library version to 2.2.0
 
