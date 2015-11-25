@@ -1,6 +1,6 @@
 {
   "name": "angular-filepicker",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "AngularJS bindings for Filepicker js library",
   "main": "src/angular_filepicker-module.js",
   "scripts": {
