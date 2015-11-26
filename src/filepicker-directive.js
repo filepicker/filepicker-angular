@@ -4,23 +4,24 @@ angular.module('angular-filepicker')
 .directive('filepicker', filepickerDirective);
 
 function filepickerDirective($rootScope, filepickerService){
-	return {
+    return {
         restrict: 'A',
         scope:{
             onSuccess:'&'
         },
         link: function(scope, element, attrs) {
             /*
-                pass orinal event
+                pass original event
             */
             element.bind('change', function(event) {
                 event.preventDefault();
-                scope.onSuccess({event: event.originalEvent});
+                scope.onSuccess({event: event.originalEvent || event});
                 $rootScope.$apply();
             });
-        	filepickerService.constructWidget(element);
+
+            element = element.length ? element[0] : element;
+
+            filepickerService.constructWidget(element);
         }
     };
-};
-
-
+}

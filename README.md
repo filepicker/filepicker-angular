@@ -1,6 +1,7 @@
 # angular-filepicker
 Filepicker library for AngularJS. It is simple wrapper of filepicker [JS library](https://api.filepicker.io/v2/filepicker.js).
 
+## [DEMO](http://filepicker.github.io/filepicker-angular/demo/index.html)
 
 ## Usage
 * Include filepicker.js script [v2](https://api.filepicker.io/v2/filepicker.js) or [v1](https://api.filepicker.io/v1/filepicker.js) and include angular-filepicker script - you can copy it from dist directory
