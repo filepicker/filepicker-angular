@@ -10,6 +10,7 @@ function filepickerDirective($rootScope, filepickerService){
             onSuccess:'&'
         },
         link: function(scope, element, attrs) {
+            var key, value;
             /*
                 pass original event
             */
@@ -20,6 +21,11 @@ function filepickerDirective($rootScope, filepickerService){
             });
 
             element = element.length ? element[0] : element;
+
+            for (key in attrs.$attr){
+                value = attrs.$attr[key];
+                element.setAttribute(value, attrs[key]);
+            }
 
             filepickerService.constructWidget(element);
         }
