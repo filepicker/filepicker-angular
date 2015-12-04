@@ -33,13 +33,13 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
             {mimetype: 'image/*'},
             onSuccess
         );
-    };
+    }
 
     function onSuccess(Blob){
         $scope.files.push(Blob);
         $window.localStorage.setItem('files', JSON.stringify($scope.files));
         $scope.$apply();
-    };
+    }
 })
 .controller('ExamplesCtrl', function ($scope, filepickerService, $window) {
     $scope.fpConvertExamples = [
@@ -53,6 +53,13 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
         'https://www.filepicker.io/api/file/k4MtpaPCRBGhzirfsxK6',
         'https://www.filepicker.io/api/file/nHZO4WqdQfWkHallRrff'
     ];
+
+    $scope.services = ['computer','facebook','webcam', 'box'].join();
+
+    $scope.FPPolicy = {
+        policy: 'dupa',
+        signature:'dwie_dupy'
+    };
 
     $scope.previewUrlExample = $scope.previewUrls[0];
 });

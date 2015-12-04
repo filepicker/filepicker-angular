@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.3 (04.12.2015)
+- In filepicker directive evaluate attributes on init.
+
 ### 1.1.2 (26.11.2015)
 - Handle no-jquery integration in filepicker directive
 
