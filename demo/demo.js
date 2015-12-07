@@ -24,22 +24,14 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
 .controller('GalleryCtrl', function ($scope, filepickerService, $window) {
     $scope.files = JSON.parse($window.localStorage.getItem('files') || '[]');
 
-    $scope.pickFile = pickFile;
-
+    $scope.options = {mimetype: 'image/*'};
     $scope.onSuccess = onSuccess;
-
-    function pickFile(){
-        filepickerService.pick(
-            {mimetype: 'image/*'},
-            onSuccess
-        );
-    };
 
     function onSuccess(Blob){
         $scope.files.push(Blob);
         $window.localStorage.setItem('files', JSON.stringify($scope.files));
         $scope.$apply();
-    };
+    }
 })
 .controller('ExamplesCtrl', function ($scope, filepickerService, $window) {
     $scope.fpConvertExamples = [
@@ -54,5 +46,38 @@ angular.module('angularFilepickerExample', ['ngRoute', 'angular-filepicker'])
         'https://www.filepicker.io/api/file/nHZO4WqdQfWkHallRrff'
     ];
 
+    $scope.services = ['computer','facebook','webcam', 'box'].join();
+
+    $scope.FPPolicy = {
+        policy: 'dupa',
+        signature:'dwie_dupy'
+    };
+
     $scope.previewUrlExample = $scope.previewUrls[0];
+})
+.directive('fpCustomDirective', function(filepickerService){
+    return {
+        scope: {
+            options: '=',
+            onSuccess:'&',
+            onError:'&',
+        },
+        template: '<button class="fp__btn" ng-click="openPicker()">Pick</button>',
+        link: function(scope, elm, attrs) {
+            scope.openPicker = openPicker;
+            scope.options = scope.options || {};
+            function openPicker(){
+                filepickerService.pick(
+                    scope.options,
+                    function(Blob){
+                        scope.onSuccess({Blob: Blob});
+                    },
+                    function(Error){
+                        scope.onError({Error: Error});
+                    }
+                );
+            }
+        }
+    };
+
 });
