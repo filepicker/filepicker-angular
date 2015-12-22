@@ -11,7 +11,7 @@ OR
 * Install via bower: ```bower install angular-filepicker``` and include scripts
 ```
 <script type="text/javascript" src="bower_components/filepicker-js/dist/filepicker.js"></script>
-<script type="text/javascript" src="bower_components/angular-filepicker/dist/angular-filepicker.js"></script>
+<script type="text/javascript" src="bower_components/angular-filepicker/dist/angular_filepicker.js"></script>
 ```
 
 * Add ```'angular-filepicker'``` module as dependency for your angular app. Example:
