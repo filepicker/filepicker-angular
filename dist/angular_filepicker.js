@@ -7,7 +7,7 @@ window.filepicker.plugin = 'angular_js_lib';'use strict';
 angular.module('angular-filepicker')
 .directive('filepicker', filepickerDirective);
 
-function filepickerDirective($rootScope, filepickerService, $parse){
+function filepickerDirective($rootScope, filepickerService){
     return {
         restrict: 'A',
         scope:{
@@ -87,6 +87,13 @@ function filepickerPreviewDirective($rootScope, filepickerService){
                 if (!url) {    
                     return; 
                 } else {
+                    // Support filestack urls that do not contain 'api/file'
+                    if (url.indexOf('api/file/') == -1) {
+                        var parser = document.createElement('a');
+                        parser.href = url;
+                        parser.pathname = '/api/file' + parser.pathname;
+                        url = parser.href;
+                    }
                     url = url.replace('api/file/', 'api/preview/');
                 }
                 iframe.src = url;
