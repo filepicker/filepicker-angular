@@ -23,6 +23,6 @@
   ],
   "dependencies": {
     "angular": ">=1.2.0",
-    "filepicker-js": "2.3.4"
+    "filepicker-js": ">=2.3.4"
   }
 }
