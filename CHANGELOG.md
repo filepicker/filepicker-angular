@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.4 (10.02.2016)
+- Set filepicker.js dependency >= 2.3.4
+
 ### 1.1.3 (04.12.2015)
 - In filepicker directive evaluate attributes on init.
 
