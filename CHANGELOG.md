@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.4 (wip)
+- Support preview for filestack urls that do not contain /api/file 
+
 ### 1.1.3 (04.12.2015)
 - In filepicker directive evaluate attributes on init.
 
