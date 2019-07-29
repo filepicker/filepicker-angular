@@ -1,4 +1,13 @@
 # angular-filepicker
+
+For now this repo is **deprecated** and we do not plan any updates for it.
+
+We strongly recommend you to update to the new filestack-angular module compatible with the newest version of Angular.
+
+https://github.com/filestack/filestack-angular
+https://www.npmjs.com/package/@filestack/angular
+
+***
 Filepicker library for AngularJS. It is simple wrapper of filepicker [JS library](https://api.filepicker.io/v2/filepicker.js).
 
 ## [DEMO](http://filepicker.github.io/filepicker-angular/demo/index.html)
